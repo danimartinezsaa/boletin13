@@ -24,11 +24,16 @@ public class ConversorTemperaturas{
     }
     
     public void centigradosAReamur(){
-        try{
-            float grados=Float.parseFloat(JOptionPane.showInputDialog("Inserte grados para pasar a Reamur:"));
-            JOptionPane.showMessageDialog(null,4f/5f*grados);
-        }catch(Exception ex2){
-            JOptionPane.showMessageDialog(null,"Número no válido.");
+        
+        while(true){
+            
+            try{
+                float grados=Float.parseFloat(JOptionPane.showInputDialog("Inserte grados para pasar a Reamur:"));
+                JOptionPane.showMessageDialog(null,4f/5f*grados);
+                break;
+            }catch(Exception ex2){
+                JOptionPane.showMessageDialog(null,"Número no válido.");
+            }
         }
     }
 }
